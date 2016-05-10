@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'hamming'
 
 # Test data version:
@@ -12,12 +13,10 @@ class HammingTest < Minitest::Test
   end
 
   def test_long_identical_strands
-    skip
     assert_equal 0, Hamming.compute('GGACTGA', 'GGACTGA')
   end
 
   def test_complete_distance_in_single_nucleotide_strands
-    skip
     assert_equal 1, Hamming.compute('A', 'G')
   end
 
