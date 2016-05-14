@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
-require_relative 'raindrops'
+require 'minitest/pride'
+require_relative 'raindrops_final'
 
 # Test data version:
 # 816e537 Merge pull request #113
@@ -12,7 +13,6 @@ class RaindropsTest < Minitest::Test
   end
 
   def test_3
-    skip
     assert_equal 'Pling', Raindrops.convert(3)
   end
 
@@ -90,7 +90,6 @@ class RaindropsTest < Minitest::Test
   # If you are curious, read more about constants on RubyDoc:
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
   def test_bookkeeping
-    skip
     assert_equal 1, Raindrops::VERSION
   end
 end
