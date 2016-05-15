@@ -4,13 +4,12 @@ class Raindrops
   VERSION = 1
 
   def self.convert(num)
-    factors = Prime.prime_division(num)
-    prime_factors = factors.map { |prime| prime[0] }
-    prime_factors_to_seven = prime_factors[0..3]
-    return num.to_s unless prime_factors_to_seven.any? { |drop| [3, 5, 7].include? drop}
-    prime_factors_to_seven.map do |num|
-      drop_converter[num]
-    end.compact.join
+    prime_factors_to_seven = Prime.prime_division(num).map { |prime| prime[0] }[0..3]
+
+
+    return num.to_s unless prime_factors_to_seven.any? { |prime| [3, 5, 7].include? prime}
+
+    prime_factors_to_seven.map { |num| drop_converter[num] }.compact.join
   end
 
   def self.drop_converter
