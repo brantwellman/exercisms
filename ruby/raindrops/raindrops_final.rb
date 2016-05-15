@@ -5,10 +5,15 @@ class Raindrops
 
   def self.convert(num)
     factors = Prime.prime_division(num)
-    return num.to_s unless factors.any? { |drop| [3, 5, 7].include? drop}
+    prime_factors = factors.map { |prime| prime[0] }
+    prime_factors_to_seven = prime_factors[0..3]
+    return num.to_s unless prime_factors_to_seven.any? { |drop| [3, 5, 7].include? drop}
+    prime_factors_to_seven.map do |num|
+      drop_converter[num]
+    end.compact.join
   end
 
-  def self_drop_converter
+  def self.drop_converter
     {
       3 => 'Pling',
       5 => 'Plang',
