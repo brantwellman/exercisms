@@ -14,4 +14,12 @@ class Squares
     total**2
   end
 
+  def sum_of_squares
+    total = 0
+    until @num == 0 do
+      total = total + @num**2
+      @num -= 1
+    end
+    total
+  end
 end
