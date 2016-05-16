@@ -1,3 +1,5 @@
+require 'pry'
+
 class Squares
   VERSION = 2
 
@@ -6,20 +8,26 @@ class Squares
   end
 
   def square_of_sum
+    number = @num
     total = 0
-    until @num == 0 do
-      total = total + @num
-      @num -= 1
+    until number == 0 do
+      total = total + number
+      number -= 1
     end
     total**2
   end
 
   def sum_of_squares
+    number = @num
     total = 0
-    until @num == 0 do
-      total = total + @num**2
-      @num -= 1
+    until number == 0 do
+      total = total + number**2
+      number -= 1
     end
     total
+  end
+
+  def difference
+    square_of_sum - sum_of_squares
   end
 end
