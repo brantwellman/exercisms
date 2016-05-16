@@ -1,5 +1,3 @@
-require 'pry'
-
 class Squares
   VERSION = 2
 
