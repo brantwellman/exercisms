@@ -29,7 +29,6 @@ class PangramTest < Minitest::Test
   end
 
   def test_pangram_with_non_ascii_characters
-    skip
     str = 'Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.'
     assert Pangram.is_pangram?(str)
   end
@@ -43,7 +42,6 @@ class PangramTest < Minitest::Test
   # If you are curious, read more about constants on RubyDoc:
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
   def test_bookkeeping
-    skip
     assert_equal 1, Pangram::VERSION
   end
 end
