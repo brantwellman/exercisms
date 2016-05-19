@@ -8,7 +8,7 @@ class Squares
   def square_of_sum
     number = @num
     total = 0
-    until number == 0 do
+    @num.times do
       total = total + number
       number -= 1
     end
@@ -18,7 +18,7 @@ class Squares
   def sum_of_squares
     number = @num
     total = 0
-    until number == 0 do
+    @num.times do
       total = total + number**2
       number -= 1
     end
