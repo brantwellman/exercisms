@@ -2,6 +2,7 @@
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require_relative 'roman_numerals'
+require 'minitest/pride'
 
 # Test data version:
 # 6985644 Merge pull request #121 from mikeyjcat/add-roman-numerals
@@ -98,7 +99,6 @@ class RomanNumeralsTest < Minitest::Test
 
   # Don't forget to define a constant VERSION inside of Fixnum.
   def test_bookkeeping
-    skip
     assert_equal 1, Fixnum::VERSION
   end
 end
