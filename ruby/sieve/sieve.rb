@@ -11,13 +11,10 @@ class Sieve
     if @num < 2
       []
     else
-      iterations = range.size
-      # binding.pry
-      iterations.times do
-        # binding.pry
+      until range.size < 1 do
         collect << range.first
+        prime = range.first
         range.delete_if do |num|
-          prime = range.first
           num % prime == 0
         end
       end
