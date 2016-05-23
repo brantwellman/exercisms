@@ -2,6 +2,7 @@
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require_relative 'sieve'
+require 'minitest/pride'
 
 class SieveTest < Minitest::Test
   def test_no_primes_under_two
