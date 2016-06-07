@@ -5,14 +5,17 @@ class Fixnum
 
   def to_roman
     arabic_to_roman = {
+      5 => 'V',
+      4 => 'IV',
       1 => 'I'
     }
+
     roman_num = ''
     arabic_num = self
-    arabic_to_roman.each do |arabic, roman|
-      while arabic_num > 0
-        roman_num = roman_num + arabic_to_roman[arabic]
-        arabic_num -= arabic
+    arabic_to_roman.each_pair do |arabic, roman|
+      while arabic_num >= arabic
+        arabic_num = arabic_num -= arabic
+        roman_num = roman_num + roman
       end
     end
     roman_num
