@@ -1,3 +1,7 @@
+class BookKeeping
+  VERSION = 2
+end
+
 class Robot
   @@names = []
   attr_reader :name
