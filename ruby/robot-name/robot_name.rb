@@ -16,6 +16,7 @@ class Robot
   end
 
   def reset
+    @@names.delete(@name)
     @name = nil
   end
 
