@@ -4,7 +4,6 @@
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require_relative 'robot_name'
-require 'pry'
 
 class RobotTest < Minitest::Test
   DIFFERENT_ROBOT_NAME_SEED = 1234
@@ -48,7 +47,6 @@ class RobotTest < Minitest::Test
     name1 = Robot.new.name
     Kernel.srand SAME_INITIAL_ROBOT_NAME_SEED
     name2 = Robot.new.name
-    binding.pry
     refute_equal name1, name2
   end
 
