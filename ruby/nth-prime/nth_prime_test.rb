@@ -2,16 +2,17 @@
 
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
+require 'minitest/pride'
 
 require_relative 'nth_prime'
 
 class TestPrimes < Minitest::Test
+
   def test_first
     assert_equal 2, Prime.nth(1)
   end
 
   def test_second
-    skip
     assert_equal 3, Prime.nth(2)
   end
 
