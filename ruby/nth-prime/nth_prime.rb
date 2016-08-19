@@ -15,8 +15,10 @@ class Prime
     primes.last
   end
 
-  def self.raise_error(input)
-    raise ArgumentError unless input > 0
-  end
+  private
+  
+    def self.raise_error(input)
+      raise ArgumentError unless input > 0
+    end
 
 end
