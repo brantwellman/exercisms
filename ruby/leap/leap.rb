@@ -1,13 +1,9 @@
+require 'pry'
+
 class Year
 
   def self.leap?(year)
-    if four_hundred_year?(year)
-      true
-    elsif one_hundred_year?(year)
-      false
-    else
-      four_year(year)
-    end
+    (four_year(year) && !one_hundred_year?(year)) || four_hundred_year?(year)
   end
 
   private
