@@ -19,6 +19,6 @@ class Grains
     63.times do
       squares << squares.last * 2
     end
-    squares.inject(0) { |result, square| result + square }
+    squares.inject() { |sum, square| sum + square }
   end
 end
