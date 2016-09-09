@@ -1,23 +1,24 @@
 require 'pry'
 
 class Year
+  class << self
+    def leap?(year)
+      (four_year(year) && !one_hundred_year?(year)) || four_hundred_year?(year)
+    end
 
-  def self.leap?(year)
-    (four_year(year) && !one_hundred_year?(year)) || four_hundred_year?(year)
+    protected
+      def one_hundred_year?(year)
+        year % 100 == 0
+      end
+
+      def four_hundred_year?(year)
+        year % 400 == 0
+      end
+
+      def four_year(year)
+        year % 4 == 0
+      end
   end
-
-  private
-    def self.one_hundred_year?(year)
-      year % 100 == 0
-    end
-
-    def self.four_hundred_year?(year)
-      year % 400 == 0
-    end
-
-    def self.four_year(year)
-      year % 4 == 0
-    end
 end
 
 module BookKeeping
