@@ -8,14 +8,27 @@ class Phrase
   end
 
   def word_count
-    words = @str.split(" ")
+    words = @str.split(/[, ]/)
+    words.map! do |word|
+      word.downcase.gsub(/^'|'$/, "").gsub(/[,]/, " ").gsub(/[^a-z0-9']/, "")
+    end
+    words.reject! { |word| word.empty? }
+    set_word_hash(words)
+  end
+
+  def set_word_hash(word_array)
     counts = Hash.new
-    words.each do |word|
-      # binding.pry
-      counts[word] ||= 1
-      # counts[word] += 1
+    word_array.each do |word|
+      if counts[word]
+        counts[word] += 1
+      else
+        counts[word] = 1
+      end
     end
     counts
   end
+end
 
+module BookKeeping
+  VERSION = 1
 end
