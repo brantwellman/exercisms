@@ -2,6 +2,7 @@
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require_relative 'bob'
+require 'minitest/pride'
 require 'pry'
 
 class BobTest < Minitest::Test
@@ -65,19 +66,16 @@ class BobTest < Minitest::Test
   end
 
   def test_only_numbers
-    skip
     remark = '1, 2, 3'
     assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
   end
 
   def test_question_with_only_numbers
-    skip
     remark = '4?'
     assert_equal 'Sure.', bob.hey(remark), feedback(remark)
   end
 
   def test_shouting_with_special_characters
-    skip
     remark = 'ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!'
     assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
   end

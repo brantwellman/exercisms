@@ -15,12 +15,21 @@ class Bob
   end
 
   def comment_analysis(letters)
-    if letters.upcase == letters
+    sanitized = sanitize(letters).strip
+    if sanitized == ''
+      'statement'
+    elsif sanitized == '?'
+      'question'
+    elsif sanitized.upcase == sanitized
       "yelling"
-    elsif letters[-1] == "?"
+    elsif sanitized[-1] == "?"
       "question"
-    elsif letters = nil
+    elsif sanitized = nil
       "empty"
     end
+  end
+
+  def sanitize(remark)
+    remark.gsub(/\d|,%^*@$\(/, ' ')
   end
 end
