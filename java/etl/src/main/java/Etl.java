@@ -4,16 +4,18 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class Etl {
-  public Map<String, Integer> dictionary = new HashMap<String, Integer>();
 
   public Map<String, Integer> transform(Map<Integer, List<String>> old) {
-    old.forEach( (k, v) -> iterateList(k, v) );
+    Map<String, Integer> dictionary = new HashMap<String, Integer>();
+
+    old.forEach( (k, v) -> iterateList(dictionary, k, v) );
     return dictionary;
    }
 
-  public void iterateList(int key, List<String>value) {
+  private Map<String, Integer> iterateList(Map<String, Integer> newDictionary, int key, List<String>value) {
     for (String letter : value) {
-      dictionary.put(letter.toLowerCase(), key);
+      newDictionary.put(letter.toLowerCase(), key);
     }
+    return newDictionary;
   }
 }
