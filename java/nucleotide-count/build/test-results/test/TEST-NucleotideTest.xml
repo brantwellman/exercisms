@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NucleotideTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2017-01-19T17:55:02" hostname="Brants-MacBook-Air-3.local" time="0.012">
+<testsuite name="NucleotideTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2017-01-19T19:11:47" hostname="Brants-MacBook-Air-3.local" time="0.013">
   <properties/>
-  <testcase name="testCountsAllNucleotides" classname="NucleotideTest" time="0.008"/>
+  <testcase name="testCountsAllNucleotides" classname="NucleotideTest" time="0.009"/>
   <testcase name="testEmptyDnaStringHasNoAdenosine" classname="NucleotideTest" time="0.0"/>
   <testcase name="testRepetitiveCytidineGetsCounted" classname="NucleotideTest" time="0.0"/>
   <testcase name="testEmptyDnaStringHasNoNucleotides" classname="NucleotideTest" time="0.0"/>
-  <testcase name="testCountsOnlyThymidine" classname="NucleotideTest" time="0.0"/>
+  <testcase name="testCountsOnlyThymidine" classname="NucleotideTest" time="0.001"/>
   <testcase name="testDnaCountsDoNotChangeAfterCountingAdenosine" classname="NucleotideTest" time="0.0"/>
-  <testcase name="testValidatesNucleotides" classname="NucleotideTest" time="0.001"/>
+  <testcase name="testValidatesNucleotides" classname="NucleotideTest" time="0.0"/>
   <testcase name="testCountsANucleotideOnlyOnce" classname="NucleotideTest" time="0.0"/>
   <testcase name="testRepetitiveSequenceWithOnlyGuanosine" classname="NucleotideTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
