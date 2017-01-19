@@ -9,7 +9,14 @@ public class DNA {
   }
 
   public int count(Character nucleotide) {
-    return 0;
+    int counter = 0;
+    for (int i=0; i < dnaString.length(); i++) {
+      char c = dnaString.charAt(i);
+      if (nucleotide.equals(c)) {
+        counter++;
+      }
+    }
+    return counter;
   }
 
   public Map<Character, Integer> nucleotideCounts() {

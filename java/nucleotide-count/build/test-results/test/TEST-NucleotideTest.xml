@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NucleotideTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-01-18T21:05:56" hostname="Brants-MacBook-Air-3.local" time="0.011">
+<testsuite name="NucleotideTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-01-19T17:14:29" hostname="Brants-MacBook-Air-3.local" time="0.011">
   <properties/>
-  <testcase name="testEmptyDnaStringHasNoAdenosine" classname="NucleotideTest" time="0.006"/>
-  <testcase name="testEmptyDnaStringHasNoNucleotides" classname="NucleotideTest" time="0.005"/>
+  <testcase name="testEmptyDnaStringHasNoAdenosine" classname="NucleotideTest" time="0.007"/>
+  <testcase name="testRepetitiveCytidineGetsCounted" classname="NucleotideTest" time="0.0"/>
+  <testcase name="testEmptyDnaStringHasNoNucleotides" classname="NucleotideTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
