@@ -9,6 +9,11 @@ public class DNA {
   }
 
   public int count(Character nucleotide) {
+    String validSymbols = "GACT";
+    if (validSymbols.indexOf(nucleotide) == -1) {
+      throw new IllegalArgumentException("That is not a valid nucleotide.");
+    }
+
     int counter = 0;
     for (int i=0; i < dnaString.length(); i++) {
       char c = dnaString.charAt(i);
@@ -20,11 +25,18 @@ public class DNA {
   }
 
   public Map<Character, Integer> nucleotideCounts() {
-    Map<Character, Integer> map = new HashMap();
-    map.put('A',0);
-    map.put('C',0);
-    map.put('G',0);
-    map.put('T',0);
-    return map;
+    Map<Character, Integer> counts = new HashMap();
+    counts.put('A',0);
+    counts.put('C',0);
+    counts.put('G',0);
+    counts.put('T',0);
+
+    for (int i=0; i < dnaString.length(); i++) {
+      char c = dnaString.charAt(i);
+      int count = counts.get(c);
+      counts.put(c, count + 1);
+    }
+
+    return counts;
   }
 }
