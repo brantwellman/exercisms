@@ -7,23 +7,33 @@ import java.util.List;
 public class WordCount {
 
   public Map<String, Integer> phrase(String phraseWords) {
+
+    String[] words = sanitizeAndSplit(phraseWords);
+
+    return constructWordMap(words);
+
+  }
+
+  private String[] sanitizeAndSplit(String sentence) {
+    String[] sanitized = sentence.replaceAll("[^a-zA-Z0-9\\s]", "").replaceAll("\\s+", " ").toLowerCase().split(" ");
+    return sanitized;
+  }
+
+  private Map<String, Integer> constructWordMap(String[] wordsArray) {
     Map<String, Integer> wordCount = new HashMap<String, Integer>();
 
-    String sanitized = phraseWords.replaceAll("[^a-zA-Z0-9\\s]", "").replaceAll("\\s+", " ").toLowerCase();
-    String[] words = sanitized.split(" ");
     int i = 0;
-    while (i < words.length) {
-      if (wordCount.containsKey(words[i])) {
-          int count = wordCount.get(words[i]);
+    while (i < wordsArray.length) {
+      if (wordCount.containsKey(wordsArray[i])) {
+          int count = wordCount.get(wordsArray[i]);
           count++;
-          wordCount.put(words[i], count);
+          wordCount.put(wordsArray[i], count);
       } else {
-          wordCount.put(words[i], 1);
+          wordCount.put(wordsArray[i], 1);
       }
       i++;
     }
 
     return wordCount;
   }
-
 }
