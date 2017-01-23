@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordCountTest" tests="6" skipped="5" failures="0" errors="0" timestamp="2017-01-20T18:54:35" hostname="Brants-MacBook-Air-3.local" time="0.004">
+<testsuite name="WordCountTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-01-23T21:16:09" hostname="Brants-MacBook-Air-3.local" time="0.004">
   <properties/>
-  <testcase name="normalizeCase" classname="WordCountTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="countOneOfEach" classname="WordCountTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="countOneWord" classname="WordCountTest" time="0.001"/>
-  <testcase name="countMultipleOccurences" classname="WordCountTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="includeNumbers" classname="WordCountTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="ignorePunctuation" classname="WordCountTest" time="0.0">
-    <skipped/>
-  </testcase>
+  <testcase name="normalizeCase" classname="WordCountTest" time="0.001"/>
+  <testcase name="countOneOfEach" classname="WordCountTest" time="0.001"/>
+  <testcase name="countOneWord" classname="WordCountTest" time="0.0"/>
+  <testcase name="countMultipleOccurences" classname="WordCountTest" time="0.001"/>
+  <testcase name="includeNumbers" classname="WordCountTest" time="0.0"/>
+  <testcase name="ignorePunctuation" classname="WordCountTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
