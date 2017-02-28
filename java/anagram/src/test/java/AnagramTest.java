@@ -24,7 +24,6 @@ public class AnagramTest {
         assertThat(anagram.size(), is(1));
     }
 
-    @Ignore
     @Test
     public void testDetectMultipleAnagrams() {
         Anagram detector = new Anagram("master");
@@ -32,7 +31,6 @@ public class AnagramTest {
         assertThat(anagrams, allOf(hasItem("maters"), hasItem("stream")));
     }
 
-    @Ignore
     @Test
     public void testDoesNotConfuseDifferentDuplicates() {
         Anagram detector = new Anagram("galea");
