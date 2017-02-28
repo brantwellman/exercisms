@@ -30,7 +30,7 @@ public class Anagram {
   // iterates through List - calls sortWord on each
   // compares each array to sortWord - if identical - adds word to List
 
-  public List<String> match(ArrayList<String> words) {
+  public List<String> match(List<String> words) {
     List<String> sortedWords = new ArrayList<String>();
 
     words.forEach((matchWord) -> {

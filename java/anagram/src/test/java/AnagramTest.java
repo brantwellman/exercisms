@@ -16,7 +16,6 @@ public class AnagramTest {
         assertTrue(detector.match(Arrays.asList("hello", "world", "zombies", "pants")).isEmpty());
     }
 
-    @Ignore
     @Test
     public void testSimpleAnagram() {
         Anagram detector = new Anagram("ant");

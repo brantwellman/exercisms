@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AnagramTest" tests="10" skipped="8" failures="0" errors="0" timestamp="2017-02-28T17:17:02" hostname="Brants-MacBook-Air-3.local" time="0.017">
+  <properties/>
+  <testcase name="testEliminateAnagramSubsets" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAnagramsAreCaseInsensitive" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDetectAnagrams" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testIdenticalWordIsNotAnagram" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testSimpleAnagram" classname="AnagramTest" time="0.011"/>
+  <testcase name="testMultipleAnagrams" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDetectMultipleAnagrams" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDoesNotConfuseDifferentDuplicates" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testNoMatches" classname="AnagramTest" time="0.0"/>
+  <testcase name="testEliminateAnagramsWithSameChecksum" classname="AnagramTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
