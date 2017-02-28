@@ -12,34 +12,23 @@ public class Anagram {
     this.sortedWordLetters = sortWord(word);
   }
 
-  // private method - sortWord
-  // returns List with sorted letters
-  // splits word into array and sorts it
-
   private List<String> sortWord(String word) {
-    List<String> sorted = new ArrayList<String>(Arrays.asList(word.split("")));
+    List<String> sorted = Arrays.asList(word.toLowerCase().split(""));
 
     Collections.sort(sorted);
 
     return sorted;
   }
 
-  // public match method
-  // returns List of words
-  // should take list of words
-  // iterates through List - calls sortWord on each
-  // compares each array to sortWord - if identical - adds word to List
-
   public List<String> match(List<String> words) {
     List<String> sortedWords = new ArrayList<String>();
 
     words.forEach((matchWord) -> {
-      if (sortWord(matchWord).equals(sortWord(word))) {
+      if (sortWord(matchWord).equals(sortedWordLetters) && !word.equals(matchWord.toLowerCase())) {
         sortedWords.add(matchWord);
       }
     });
 
     return sortedWords;
   }
-
 }
